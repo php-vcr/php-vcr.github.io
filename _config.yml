@@ -1,0 +1,20 @@
+title: PHP-VCR
+tagline: Record HTTP interactions while testing
+markdown: redcarpet
+permalink: /:categories/:title/
+baseurl: ""
+repository:
+  web: "https://github.com/adri/php-vcr"
+  git: "git://github.com/php-vcr/php-vcr.git"
+google:
+  search: ""
+  analytics: ""
+  plus: ""
+exclude:
+  - "node_modules"
+  - "Gruntfile.coffee"
+  - "README.md"
+  - "npm-debug.log"
+  - "package.json"
+  - "php-vcr.github.io.sublime-project"
+  - "php-vcr.github.io.sublime-workspace"
