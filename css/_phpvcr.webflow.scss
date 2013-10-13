@@ -136,12 +136,13 @@ img {
   padding-bottom: 20px;
   text-align: center;
 }
-.company {
+a.company {
   display: inline-block;
   font-family: Montserrat, sans-serif;
   color: #2e323d;
   font-size: 31px;
   font-weight: 700;
+  text-decoration: none;
 }
 .nav-link {
   margin-right: 11px;
