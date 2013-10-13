@@ -3,4 +3,121 @@ layout: default
 title: PHP-VCR | Record HTTP interactions while testing
 ---
 
-test
+<div class="section hero">
+    <div class="w-container">
+      <h1 class="hero-heading">Record  HTTP interactions in your tests </h1>
+      <p class="hero-subhead">...and replay them during future test runs for fast, deterministic, accurate</p>
+    </div>
+    <div class="w-container">
+      <div class="w-embed w-video"></div>
+    </div>
+  </div>
+  <div class="section" id="page-nav-What">
+    <div class="section-headline">
+      <h1 class="section-title">What?</h1>
+      <p class="section-subtitle">Instead of manually mocking external libraries for your tests, record HTTP requests and replay them later.</p>
+    </div>
+    <div class="w-container">
+      <div class="w-row">
+        <div class="w-col w-col-7">
+          <img src="/img/phpvcr-overview.png" alt="phpvcr-overview.png">
+        </div>
+        <div class="w-col w-col-5 content-column">
+          <h3>Fast</h3>
+          <p>If you run hundreds of tests, you don't want to hit a real API all the time. This slows down running the tests quite a bit. Not coding all those mocks for API responses speeds up your development process.</p>
+          <h3>Deterministic</h3>
+          <p>One reason for manual mocking is, to get the exact same response every time your app makes a request. Testing against live APIs would require this API to be online all the time.</p>
+          <h3>Accurate</h3>
+          <p>Send it to your best friends and your grandma. It’ll work on their computers and phones. Send it to your best friends and your grandma. It’ll work on their computers and phones.</p>
+        </div>
+      </div>
+    </div>
+    <div class="w-container">
+      <p class="hero-subhead">This is a fork of the fabulous VCR for ruby library.</p>
+    </div>
+  </div>
+  <div class="section grey" id="page-nav-Features">
+    <div class="section-headline">
+      <h1 class="section-title">Features</h1>
+      <p class="section-subtitle">Send it to your best friends and your grandma. It’ll work on their computers and phones.</p>
+    </div>
+    <div class="w-container">
+      <div class="w-row">
+        <div class="w-col w-col-4">
+          <h3>Simple</h3>
+          <p>Automatically records and replays your HTTP(s) interactions with minimal setup/configuration code. No modifications to your production code necessary.</p>
+        </div>
+        <div class="w-col w-col-4">
+          <h3>Intercepting<br></h3>
+          <p>Supports common http functions and extensions like streamWrapper (fopen(), fread(), file_get_contents()), SoapClient and cUrl.</p>
+        </div>
+        <div class="w-col w-col-4">
+          <h3>Isolating</h3>
+          <p>Disables all HTTP requests that you don't explicitly allow (except if configured).</p>
+        </div>
+      </div>
+      <div class="w-row">
+        <div class="w-col w-col-4">
+          <h3>Configurable</h3>
+          <p>Easily configure request matching or add custom request matchers, store HTTP interactions on disk in YAML and JSON.</p>
+        </div>
+        <div class="w-col w-col-4">
+          <h3>Integreated<br></h3>
+          <p>Supports PHPUnit. Recorded requests and responses can easily be inspected and edited.</p>
+        </div>
+        <div class="w-col w-col-4">
+          <h3>Soon: Privacy aware</h3>
+          <p>Automatically filters confidential or private information like emails, tokens and passwords.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="section centered" id="page-nav-Documentation">
+    <div class="section-headline">
+      <h1 class="section-title" id="page-nav-documentation">Documentation</h1>
+      <p class="section-subtitle">Yes, there is documentation.</p>
+    </div>
+    <div class="w-container quick-install">
+      <div class="code-headline">Quick install:</div>
+      <div class="code">composer require adri/php-vcr
+        <br>composer update
+        <br>
+      </div>
+      <input class="w-button button copy" type="submit" value="copy" data-wait="Please wait..."></input>
+    </div>
+    <div class="w-container">
+      <div class="w-row">
+        <div class="w-col w-col-4 w-col-small-4">
+          <div class="w-clearfix icons">
+            <img class="icon" src="/img/60e99974-e829-4dc1-accd-daf1e7fdf1c1_9-icon2-brush.png" width="37px" alt="60e99974-e829-4dc1-accd-daf1e7fdf1c1_9-icon2-brush.png">
+          </div>
+          <h3>Installation</h3>
+          <p>
+            Simple installation using composer. Turn on PHP-VCR in your test bootstrap file.<br />
+            <a href="/documentation/installation">More information</a>
+          </p>
+        </div>
+        <div class="w-col w-col-4 w-col-small-4">
+          <div class="w-clearfix icons">
+            <img class="icon" src="/img/3ac4f3ae-7b57-4c26-930b-fbaed24601b3_9-icon2-chat.png" width="37px" alt="3ac4f3ae-7b57-4c26-930b-fbaed24601b3_9-icon2-chat.png">
+          </div>
+          <h3>Configuration</h3>
+          <p>
+            Easily configure PHP-VCR to your needs.<br />
+            <a href="/documentation/configuration">More information</a>
+          </p>
+        </div>
+        <div class="w-col w-col-4 w-col-small-4">
+          <div class="w-clearfix icons">
+            <img class="icon" src="/img/5b9ab216-8502-4c2a-9d0d-13f712a8d7c9_9-icon2-drops.png" width="37px" alt="5b9ab216-8502-4c2a-9d0d-13f712a8d7c9_9-icon2-drops.png">
+          </div>
+          <h3>Code Examples</h3>
+            <p>
+                Learn how to use PHP-VCR with:<br />
+                <a href="https://github.com/php-vcr/php-vcr-examples/tree/master/soap">SoapClient</a>
+                and <a href="https://github.com/php-vcr/php-vcr-examples/tree/master/guzzle">Guzzle</a>
+            </p>
+        </div>
+      </div>
+    </div>
+  </div>
