@@ -1,0 +1,27 @@
+@import 'normalize';
+@import 'webflow';
+@import 'phpvcr.webflow';
+
+p {
+    font-size: 14px;
+    line-height: 23px;
+}
+
+a {
+    font-family: 'Varela Round', sans-serif;
+    color: #848999;
+}
+
+code {
+    background: rgba(0,0,0,0.5);
+    border-radius: 10px;
+    color: white;
+    display: block;
+    padding: 10px;
+}
+
+p > code {
+    display: inline;
+    padding: 2px 6px 4px 6px;
+    border-radius: 5px;
+}
