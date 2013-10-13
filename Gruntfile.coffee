@@ -8,7 +8,7 @@ module.exports = ->
         options:
           hostname: '*'
           port: 4000
-          base: '_site'
+          base: 'build'
 
     sass:
       src:
@@ -33,17 +33,17 @@ module.exports = ->
           dest: 'css/'
         ]
 
-    #imagemin:
-    #  dist:
-    #    options:
-    #      optimizationLevel: 7
-    #    files: [
-    #        expand: true # only compressing jpg right now
-    #        cwd: 'img-src/'
-    #        src: ['**/*.jpg']
-    #        dest: 'img/',
-    #        ext: '.jpg'
-    #    ]
+    imagemin:
+     dist:
+       options:
+         optimizationLevel: 7
+       files: [
+           expand: true # only compressing jpg right now
+           cwd: 'img/'
+           src: ['**/*.jpg']
+           dest: 'img/',
+           ext: '.jpg'
+       ]
 
     jekyll:
       dev:
