@@ -321,6 +321,19 @@ img {
 .sidebar-navi {
   text-align: left;
 }
+.warning {
+  display: block;
+  width: 80%;
+  margin: 0px auto;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 13px;
+  border: 1px solid #a18900;
+  border-radius: 5px;
+  background-color: rgba(214, 132, 24, 0.90);
+  color: white;
+  text-align: left;
+}
 @media (max-width: 991px) {
   .button.nav {
     margin-left: 11px;
