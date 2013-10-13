@@ -1,0 +1,42 @@
+---
+layout: default
+---
+
+  <div class="section centered" id="page-nav-Documentation">
+    <div class="section-headline">
+      <h1 class="section-title" id="page-nav-documentation">Documentation</h1>
+      <p class="section-subtitle">Yes, there is documentation.</p>
+    </div>
+
+    {% if page.url == '/documentation/index.html' %}
+    <div class="w-container quick-install">
+      <div class="code-headline">Quick install:</div>
+      <div class="code">composer require php-vcr/php-vcr
+        <br>composer update
+        <br>
+      </div>
+      <input class="w-button button copy" type="submit" value="copy" data-wait="Please wait..."></input>
+    </div>
+    {% endif %}
+
+    <div class="w-container">
+      <div class="w-row">
+
+        <div class="w-col w-col-2 sidebar">
+          <div class="sidebar-navi">
+            <h5>Sections</h5>
+            {% for post in site.categories['documentation'] %}
+              <a href="{{ site.baseurl }}{{ post.url }}" class="w-inline-block nav-link{% if post.url == page.url %} active{% endif%}">{{ post.title }}</a>
+            {% endfor %}
+          </div>
+        </div>
+
+        <div class="w-col w-col-10 article">
+          <h1>{{ page.title }}</h1>
+          <p>{{ content }}</p>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
