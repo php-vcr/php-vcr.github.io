@@ -11,7 +11,6 @@ PHP-VCR is available via [composer](http://getcomposer.org) which is the recomme
     # Add PHP-VCR as a dependency
     php composer.phar require php-vcr/php-vcr:~1.0
 
-
 After installing you need to turn on PHP-VCR in your test bootstrap file (for example in `tests/boostrap.php`). 
 
 **Important:** Make sure you enable PHP-VCR right after Composer's autoloader.
