@@ -37,24 +37,25 @@ You can customize how PHP-VCR matches requests using the configuration option. L
 PHP-VCR allows you to define your own request matchers as callback functions and combine them with existing ones.
 
     \VCR\\VCR::configue()
-        ->addRequestMatcher('custom_matcher',function (\VCR\Request $first, \VCR\Request $second) {
-            // custom request matching
-            return true;
-        })
+        ->addRequestMatcher(
+            'custom_matcher',
+            function (\VCR\Request $first, \VCR\Request $second) {
+                // custom request matching
+                return true;
+            }
+        )
         ->enableRequestMatchers(array('method', 'url', 'custom_matcher'));
 
 ## White- and Blacklisting methods
 
-In special occursions, like a dedicated test scenario, you might want to exclude (blacklisting) or especially include (whitelisting) one or more methods throughout the test execution.
-This can be achieved by registering the name of the methods to either the recognized Blacklist
+In special occasions, like a dedicated test scenario, you might want to exclude (blacklisting) or especially include (whitelisting) one or more methods throughout the test execution.
+This can be achieved by registering the name of the methods to either the recognized blacklist:
 
-    \VCR\VCR::configure()
-        ->setBlackList(array('NameOfTheSpecialMethod'));
+    \VCR\VCR::configure()->setBlackList(array('NameOfTheSpecialMethod'));
 
-or an available Whitelist
+or the provided whitelist:
 
-    VCR\VCR::configure()
-        ->setWhiteList(array('NameOfTheSpecialMethod'));
+    VCR\VCR::configure()->setWhiteList(array('NameOfTheSpecialMethod'));
 
-You certainly can use both in one setup but be aware that a method set in the whitelist rules out the same method set on the blacklist and will be processed even when added to the blacklist.
-Both methods (setBlacklist() and setWhiteList()) do also follow the fluent interface mentioned above. 
+You certainly can use both in one setup, but be aware that a method set in the whitelist rules out the same method added to the blacklist and will be processed even when added to the blacklist.
+Both methods (setBlacklist() and setWhiteList()) do also follow the fluent interface paradigm mentioned above.
