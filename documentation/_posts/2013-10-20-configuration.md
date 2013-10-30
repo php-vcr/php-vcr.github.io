@@ -3,7 +3,7 @@ layout: documentation
 title: Configuration
 ---
 
-PHP-VCR can be configured by calling it's `configure` method which returns a `Configuration` object which is a [fluent interface](http://en.wikipedia.org/wiki/Fluent_Interface) that can be used to change the behavior of PHP-VCR.
+PHP-VCR can be configured by calling it's `configure` method which returns a `Configuration` object which is a [fluent interface](http://en.wikipedia.org/wiki/Fluent_interface) that can be used to change the behavior of PHP-VCR.
 
     \VCR\VCR::configure();
 
