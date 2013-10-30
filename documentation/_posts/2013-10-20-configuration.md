@@ -49,16 +49,15 @@ PHP-VCR allows you to define your own request matchers as callback functions and
         )
         ->enableRequestMatchers(array('method', 'url', 'custom_matcher'));
 
-## White- and Blacklisting methods
+## White- and Blacklisting paths
 
-In special occasions, like a dedicated test scenario, you might want to exclude (blacklisting) or especially include (whitelisting) one or more methods throughout the test execution.
-This can be achieved by registering the name of the methods to either the recognized blacklist:
+PHP-VCR scans and overwrites your PHP code on-the-fly in order to hook into libraries like cUrl and SOAP. By default all paths except the PHP-VCR library hooks folder are scanned.
 
-    \VCR\VCR::configure()->setBlackList(array('NameOfTheSpecialMethod'));
+To speedup the test execution, you might want to exclude (blacklist) or specifically include (whitelist) one or more paths to be scanned throughout the test execution:
 
-or the provided whitelist:
+    \VCR\VCR::configure()
+        ->setBlackList(array('do/not/scan/this/path'))
+        ->setWhiteList(array('vendor/guzzle'));
 
-    VCR\VCR::configure()->setWhiteList(array('NameOfTheSpecialMethod'));
-
-You certainly can use both in one setup, but be aware that a method set in the whitelist rules out the same method added to the blacklist and will be processed even when added to the blacklist.
-Both methods (setBlacklist() and setWhiteList()) do also follow the fluent interface paradigm mentioned above.
+Paths you provide are substrings. For example if `vendor\guzzle` is on the whitelist, only files containing that path are scanned – think of `*vendor\guzzle*`.
+You certainly can use white- and blacklisting in one setup, but be aware that a PHP-VCR scans and overwrites paths only if they are in a whitelist and not on a blacklist. 
