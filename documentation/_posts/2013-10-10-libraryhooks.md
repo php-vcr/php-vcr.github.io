@@ -4,7 +4,7 @@ title: Library Hooks
 ---
 
 Library hooks allow PHP-VCR to **intercept HTTP requests** by overwriting the libraries method to issue requests.
-Currently there are four library hooks available:
+Currently there are these library hooks available:
 
  * `curl` intercepting requests issued by ext-curl using source-code overwriting
  * `soap` intercepting requests issued by [SoapClient](http://php.net/SoapClient) using source-code overwriting
