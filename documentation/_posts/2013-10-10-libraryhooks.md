@@ -3,11 +3,10 @@ layout: documentation
 title: Library Hooks
 ---
 
-Library hooks allow PHP-VCR to **intercept HTTP requests** by overwriting the libraries method to issue requests. 
+Library hooks allow PHP-VCR to **intercept HTTP requests** by overwriting the libraries method to issue requests.
 Currently there are four library hooks available:
 
- * `curl_rewrite` intercepting requests issued by ext-curl using source-code overwriting
- * `curl_runkit` intercepting ext-curl requests using ex-runkit
+ * `curl` intercepting requests issued by ext-curl using source-code overwriting
  * `soap` intercepting requests issued by [SoapClient](http://php.net/SoapClient) using source-code overwriting
  * `stream_wrapper` intercepting requests issued by any PHP function based on stream wrappers like [fopen](http://php.net/fopen), [file_get_contents](http://php.net/file_get_contents)
 
@@ -18,22 +17,18 @@ Library hooks can be enabled or disabled. If enabled, all HTTP interactions issu
 
 ### Curl
 
-The `curl_rewrite` hook intercepts HTTP interactions made by the popular `ext-curl` PHP extension. Specifically the following functions will be overwritten.
+The `curl` hook intercepts HTTP interactions made by the popular `ext-curl` PHP extension. Specifically the following functions will be overwritten.
 
-    curl_init       
-    curl_exec       
-    curl_getinfo    
-    curl_setopt     
-    curl_setopt_array 
-    curl_multi_add_handle 
-    curl_multi_remove_handle 
-    curl_multi_exec 
-    curl_multi_info_read 
+    curl_init
+    curl_exec
+    curl_getinfo
+    curl_setopt
+    curl_setopt_array
+    curl_multi_add_handle
+    curl_multi_remove_handle
+    curl_multi_exec
+    curl_multi_info_read
 
-
-### Curl Runkit
-
-The `curl_runkit` hook does pretty much the same as `curl_rewrite` hook but using ext-runkit instead of source-code overwriting.
 
 ### Soap
 
