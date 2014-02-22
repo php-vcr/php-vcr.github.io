@@ -23,7 +23,7 @@ title: PHP-VCR | Record HTTP interactions while testing
           <img src="/img/phpvcr-overview.png" alt="phpvcr-overview.png">
         </div>
         <div class="w-col w-col-5 content-column">
-          <h3>Fast</h3>
+          <h3>Faster tests</h3>
           <p>If you run hundreds of tests, you don't want to hit a real API all the time. This slows down your test suite quite a bit. The faster your tests are, the faster you can iterate over code changes.</p>
           <h3>Deterministic</h3>
           <p>Can you run integration tests on your notebook? Testing against live APIs require those APIs to be online all the time, and you have to be online as well. Free yourself from those dependencies.</p>
@@ -44,25 +44,25 @@ title: PHP-VCR | Record HTTP interactions while testing
     <div class="w-container">
       <div class="w-row">
         <div class="w-col w-col-4">
-          <h3>Simple</h3>
-          <p>Automatically records and replays HTTP(s) interactions with minimal setup/configuration code. No modifications to your production code necessary.</p>
+          <h3>Easy setup</h3>
+          <p>Automatically records and replays HTTP(s) interactions with minimal setup. No modifications to your production code necessary.</p>
         </div>
         <div class="w-col w-col-4">
-          <h3>Intercepting<br></h3>
+          <h3>Library support<br></h3>
           <p>Supports common http functions and extensions like streamWrapper (fopen(), fread(), file_get_contents()), SoapClient and cUrl.</p>
         </div>
         <div class="w-col w-col-4">
-          <h3>Isolating</h3>
+          <h3>HTTP isolation</h3>
           <p>Disables all HTTP requests that you don't explicitly allow (except if configured).</p>
         </div>
       </div>
       <div class="w-row">
         <div class="w-col w-col-4">
           <h3>Configurable</h3>
-          <p>Easily configure request matching or add custom request matchers, store HTTP interactions on disk in YAML and JSON.</p>
+          <p>Easily configure request matching or add custom request matchers. Store HTTP interactions on disk in YAML or JSON.</p>
         </div>
         <div class="w-col w-col-4">
-          <h3>Integrated<br></h3>
+          <h3>PHPUnit integration<br></h3>
           <p>Supports PHPUnit. Recorded requests and responses can easily be inspected and edited.</p>
         </div>
         <div class="w-col w-col-4">
@@ -79,7 +79,7 @@ title: PHP-VCR | Record HTTP interactions while testing
     </div>
     <div class="w-container quick-install">
       <div class="code-headline">Quick install:</div>
-      <div class="code">composer require php-vcr/php-vcr
+      <div class="code" code="bash">composer require php-vcr/php-vcr
         <br>composer update
         <br>
       </div>

@@ -18,7 +18,7 @@ You also need some additional tools:
 
 Then to develop the site, run:
 
-    $ grunt dev
+    $ grunt 
 
 This will start a web server at <http://localhost:4000>. Grunt watches for any changes in the source files and triggers a rebuild as needed.
 
