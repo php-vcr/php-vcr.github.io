@@ -38,5 +38,5 @@ PHP-VCR overwrites SOAP communication right before the request is sent by overwr
 
 ### StreamWrapper
 
-The `stream_wrapper` hook registers a global [stream wrapper](http://php.net/stream_wrapper) for HTTP and HTTPS protocols. This way [all PHP functions using stream wrappers] will be intercepted.
+The `stream_wrapper` hook registers a global [stream wrapper](http://php.net/stream_wrapper) for HTTP and HTTPS protocols. This way all PHP functions using stream wrappers will be intercepted.
 
