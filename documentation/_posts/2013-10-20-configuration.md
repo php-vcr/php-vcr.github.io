@@ -33,12 +33,12 @@ In order to replay previously recorded requests, PHP-VCR must match new HTTP req
 
 You can customize how PHP-VCR matches requests using the configuration option. List every name of a matcher that should be enabled.
 
-    \VCR\\VCR::configue()
+    \VCR\VCR::configure()
         ->enableRequestMatchers(array('method', 'url', 'host'));
 
 PHP-VCR allows you to define your own request matchers as callback functions and combine them with existing ones.
 
-    \VCR\\VCR::configue()
+    \VCR\VCR::configure()
         ->addRequestMatcher(
             'custom_matcher',
             function (\VCR\Request $first, \VCR\Request $second) {
