@@ -2,6 +2,10 @@
 @import 'webflow';
 @import 'phpvcr.webflow';
 
+.header .nav-column a {
+    color: white;
+}
+
 p, li {
     font-size: 14px;
     line-height: 23px;
