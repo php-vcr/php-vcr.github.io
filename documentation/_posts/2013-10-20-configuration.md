@@ -60,3 +60,16 @@ To speedup the test execution, you might want to exclude (blacklist) or specific
 
 Paths you provide are substrings. For example if `vendor\guzzle` is on the whitelist, only files containing that path are scanned – think of `*vendor\guzzle*`.
 You certainly can use white- and blacklisting in one setup, but be aware that a PHP-VCR scans and overwrites paths only if they are in a whitelist and not on a blacklist.
+
+
+### Record modes
+
+The record mode determines how requests are handled. Available modes are:
+ * `new_episodes` always allows new HTTP requests, mode by default.
+ * `once` will allow new HTTP requests the first time the cassette is created then throw an exception after that.
+ * `none` will never allow new HTTP requests.
+
+    ```
+    \VCR\VCR::configure()
+        ->setMode('once');
+    ```
