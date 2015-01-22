@@ -65,6 +65,7 @@ You certainly can use white- and blacklisting in one setup, but be aware that a 
 ### Record modes
 
 The record mode determines how requests are handled. Available modes are:
+
  * `new_episodes` always allows new HTTP requests, mode by default.
  * `once` will allow new HTTP requests the first time the cassette is created then throw an exception after that.
  * `none` will never allow new HTTP requests.
