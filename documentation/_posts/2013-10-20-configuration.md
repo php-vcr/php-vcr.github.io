@@ -17,7 +17,7 @@ PHP-VCR can be configured by calling it's `configure` method which returns a `Co
     \VCR\VCR::turnOn();
 
 Library hooks can only intercept HTTP requests if PHP-VCR is turned on right after initializing your autoloader, before the actual class to be replaced is loaded.
-Once loaded php-vcr does not have any change to do its' magic and intercept any request and/or response invoked by this class.
+Once loaded php-vcr does not have any chance to do its' magic and intercept any request and/or response invoked by this class.
 
 
 ### Request matching
