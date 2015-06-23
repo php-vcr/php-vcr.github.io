@@ -25,7 +25,8 @@ Once loaded php-vcr does not have any change to do its' magic and intercept any 
 In order to replay previously recorded requests, PHP-VCR must match new HTTP requests to a recorded one. By default, it matches all aspects of a HTTP request to fully identify the resource and action. Available request matchers are:
 
  * `method` matches the HTTP method like GET, POST, ...
- * `url` matches the URI
+ * `url` matches the path of the URI; does not include the query string
+ * `query_string` matches the query string
  * `host` matches the host name
  * `headers` matches all headers
  * `body` matches the request body
