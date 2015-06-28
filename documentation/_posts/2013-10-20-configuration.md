@@ -51,12 +51,14 @@ PHP-VCR allows you to define your own request matchers as callback functions and
 
 ### Storage
 
-PHP-VCR stores HTTP interactions on disk in YAML or JSON. PHP-VCR can use also a Backhole storage, this storage loses everything. By default, PHP-VCR use the YAML storage.
+PHP-VCR stores HTTP interactions on disk in YAML or JSON format. PHP-VCR can use also a Backhole storage, this storage loses everything. By default, PHP-VCR uses the YAML storage.
 
-Warning: Using the YAML storage could lead to a segmentation fault. The problem could be fixed by increasing pcre.backtrack_limit in php.ini or by the use of JSON storage.
+Warning: Using the YAML storage could lead to a segmentation fault for large requests or responses. The problem could be fixed by increasing `pcre.backtrack_limit` in php.ini or by the use of the JSON storage.
 
     \VCR\VCR::configure()
         ->setStorage('json');
+        
+Valid options are `json`, `yaml` and `blackhole`.
 
 
 ### White- and Blacklisting paths
