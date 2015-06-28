@@ -8,7 +8,7 @@ module.exports = ->
         options:
           hostname: '*'
           port: 4000
-          base: 'build'
+          base: '_site'
 
     sass:
       generate:
