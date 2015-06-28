@@ -9,7 +9,7 @@ PHP-VCR can be configured by calling it's `configure` method which returns a `Co
 
 ### Library hooks
 
-**By default all [library hooks]() are enabled**. You can specifically enable only some hooks by configuring PHP-VCR. In your bootstrap file you can do:
+**By default all [library hooks](/documentation/libraryhooks) are enabled**. You can specifically enable only some hooks by configuring PHP-VCR. In your bootstrap file you can do:
 
     require_once __DIR__ . '/../vendor/autoload.php';
 
