@@ -1,25 +1,10 @@
-PHP-VCR Website
-===============
+# php-vcr website (deprecated)
 
-Sources for the [php-vcr](http://php-vcr.github.io) website.
+**This repository is deprecated and no longer maintained.** It used to hold the Jekyll/Grunt sources for the
+old php-vcr documentation site. The site now lives at
+[php-vcr.github.io/php-vcr](https://php-vcr.github.io/php-vcr/), generated from the
+[`docs/`](https://github.com/php-vcr/php-vcr/tree/master/docs) folder in the
+[php-vcr/php-vcr](https://github.com/php-vcr/php-vcr) repository.
 
-## Contributing to the site
-
-Feel free to send pull requests. Local site development is handled using [Grunt](http://gruntjs.com/).
-
-Install the dependencies with:
-
-    $ npm install
-
-You also need some additional tools:
-
-    $ sudo gem install jekyll
-    $ sudo gem install sass --pre
-
-Then to develop the site, run:
-
-    $ grunt 
-
-This will start a web server at <http://localhost:4000>. Grunt watches for any changes in the source files and triggers a rebuild as needed.
-
-
+This repo now only contains a redirect (`index.html`) from the old root URL to the new site. Documentation
+contributions go to [php-vcr/php-vcr](https://github.com/php-vcr/php-vcr), not here.

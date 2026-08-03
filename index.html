@@ -1,133 +1,14 @@
----
-layout: default
-title: PHP-VCR | Record HTTP interactions while testing
----
-
-<div class="section hero">
-    <div class="w-container">
-      <h1 class="hero-heading">Record  HTTP interactions in your tests </h1>
-      <p class="hero-subhead">...and replay them during future test runs for fast, deterministic and accurate tests.</p>
-    </div>
-  <div class="w-container">
-      <p class="warning">Disclaimer: Doing this in PHP is not as easy as in programming languages which support monkey patching – this project is not yet fully tested, so please use at your own risk!</p>
-    </div>
-  </div>
-  <div class="section" id="page-nav-What">
-    <div class="section-headline">
-      <h1 class="section-title">What?</h1>
-      <p class="section-subtitle">Instead of manually mocking API calls for your tests, record HTTP requests and replay them later.</p>
-    </div>
-    <div class="w-container">
-      <div class="w-row">
-        <div class="w-col w-col-7">
-          <img src="/img/phpvcr-overview.png" alt="phpvcr-overview.png">
-        </div>
-        <div class="w-col w-col-5 content-column">
-          <h3>Faster tests</h3>
-          <p>If you run hundreds of tests, you don't want to hit a real API all the time. This slows down your test suite quite a bit. The faster your tests are, the faster you can iterate over code changes.</p>
-          <h3>Deterministic</h3>
-          <p>Can you run integration tests on your notebook? Testing against live APIs require those APIs to be online all the time, and you have to be online as well. Free yourself from those dependencies.</p>
-          <h3>Accurate</h3>
-          <p>One reason for manual mocking is, to get the exact same response every time your app makes a request. Not coding all those mocks for API responses speeds up your development process.</p>
-        </div>
-      </div>
-    </div>
-    <div class="w-container">
-      <p class="hero-subhead">This is a fork of the fabulous <a href="https://github.com/vcr/vcr">VCR for ruby library</a>.</p>
-    </div>
-  </div>
-  <div class="section grey" id="page-nav-Features">
-    <div class="section-headline">
-      <h1 class="section-title">Features</h1>
-      <p class="section-subtitle">Easy to use and extendable.</p>
-    </div>
-    <div class="w-container">
-      <div class="w-row">
-        <div class="w-col w-col-4">
-          <h3>Easy setup</h3>
-          <p>Automatically records and replays HTTP(s) interactions with minimal setup. No modifications to your production code necessary.</p>
-        </div>
-        <div class="w-col w-col-4">
-          <h3>Library support<br></h3>
-          <p>Supports common http functions and extensions like streamWrapper (fopen(), fread(), file_get_contents()), SoapClient and cUrl.</p>
-        </div>
-        <div class="w-col w-col-4">
-          <h3>HTTP isolation</h3>
-          <p>Disables all HTTP requests that you don't explicitly allow (except if configured).</p>
-        </div>
-      </div>
-      <div class="w-row">
-        <div class="w-col w-col-4">
-          <h3>Configurable</h3>
-          <p>Easily configure request matching or add custom request matchers. Store HTTP interactions on disk in YAML or JSON.</p>
-        </div>
-        <div class="w-col w-col-4">
-          <h3>PHPUnit integration<br></h3>
-          <p>Supports PHPUnit. Recorded requests and responses can easily be inspected and edited.</p>
-        </div>
-        <div class="w-col w-col-4">
-          <h3>Soon: Privacy aware</h3>
-          <p>Automatically filters confidential or private information like emails, tokens and passwords.</p>
-        </div>
-      </div>
-      <div class="w-row">
-        <div class="w-col w-col-6">
-          <h3>Lightningtalk<br></h3>
-          <iframe src="//www.slideshare.net/slideshow/embed_code/33931377" width="425" height="355" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe>
-        </div>
-        <div class="w-col w-col-6">
-          <h3>Case Study with Behat<br></h3>
-          <iframe src="//www.slideshare.net/slideshow/embed_code/key/c08AcRoTQSPL9i" width="425" height="355" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> <div style="margin-bottom:5px"> <strong> <a href="//www.slideshare.net/Thormeier/php-vcr-behat-case-study" title="PHP-VCR behat case study" target="_blank">PHP-VCR behat case study</a> </strong> from <strong><a href="//www.slideshare.net/Thormeier" target="_blank">Pascal Thormeier</a></strong> </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="section centered" id="page-nav-Documentation">
-    <div class="section-headline">
-      <h1 class="section-title" id="page-nav-documentation">Documentation</h1>
-      <p class="section-subtitle">Still WIP but there is a little documentation.</p>
-    </div>
-    <div class="w-container quick-install">
-      <div class="code-headline">Quick install:</div>
-      <div class="code" code="bash">composer require --dev php-vcr/php-vcr
-        <br>
-        <br>
-      </div>
-      <input class="w-button button copy" type="submit" value="copy" data-wait="Please wait..."></input>
-    </div>
-    <div class="w-container">
-      <div class="w-row">
-        <div class="w-col w-col-4 w-col-small-4">
-          <div class="w-clearfix icons">
-            <img class="icon" src="/img/60e99974-e829-4dc1-accd-daf1e7fdf1c1_9-icon2-brush.png" width="37px" alt="60e99974-e829-4dc1-accd-daf1e7fdf1c1_9-icon2-brush.png">
-          </div>
-          <h3>Installation</h3>
-          <p>
-            Simple installation using composer. Turn on PHP-VCR in your test bootstrap file.<br />
-            <a href="/documentation/installation">More information</a>
-          </p>
-        </div>
-        <div class="w-col w-col-4 w-col-small-4">
-          <div class="w-clearfix icons">
-            <img class="icon" src="/img/3ac4f3ae-7b57-4c26-930b-fbaed24601b3_9-icon2-chat.png" width="37px" alt="3ac4f3ae-7b57-4c26-930b-fbaed24601b3_9-icon2-chat.png">
-          </div>
-          <h3>Configuration</h3>
-          <p>
-            Easily configure PHP-VCR to your needs.<br />
-            <a href="/documentation/configuration">More information</a>
-          </p>
-        </div>
-        <div class="w-col w-col-4 w-col-small-4">
-          <div class="w-clearfix icons">
-            <img class="icon" src="/img/5b9ab216-8502-4c2a-9d0d-13f712a8d7c9_9-icon2-drops.png" width="37px" alt="5b9ab216-8502-4c2a-9d0d-13f712a8d7c9_9-icon2-drops.png">
-          </div>
-          <h3>Code Examples</h3>
-            <p>
-                Learn how to use PHP-VCR with:<br />
-                <a href="https://github.com/php-vcr/php-vcr-examples/tree/master/soap">SoapClient</a>
-                and <a href="https://github.com/php-vcr/php-vcr-examples/tree/master/guzzle">Guzzle</a>
-            </p>
-        </div>
-      </div>
-    </div>
-  </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>php-vcr documentation has moved</title>
+  <meta http-equiv="refresh" content="0; url=https://php-vcr.github.io/php-vcr/">
+  <link rel="canonical" href="https://php-vcr.github.io/php-vcr/">
+</head>
+<body>
+  <p>The php-vcr documentation has moved to
+    <a href="https://php-vcr.github.io/php-vcr/">https://php-vcr.github.io/php-vcr/</a>.
+  </p>
+</body>
+</html>
